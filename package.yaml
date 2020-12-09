@@ -1,0 +1,30 @@
+name:                braille-conway
+version:             0.1.0.0
+github:              "mlang/braille-conway"
+license:             BSD3
+author:              "Mario Lang"
+maintainer:          "mlang@blind.guru"
+copyright:           "2020 Mario Lang"
+
+extra-source-files:
+- README.md
+
+synopsis:            Conway's Game of Braille
+# category:            Web
+
+description:         Conway's Game of Life for Uncidoe Braille characters
+
+dependencies:
+- base >= 4.7 && < 5
+- vector
+
+library:
+  source-dirs: src
+
+executables:
+  braille-conway:
+    main:                Main.hs
+    source-dirs:         app
+    dependencies:
+    - braille-conway
+    - ansi-terminal

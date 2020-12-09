@@ -1,0 +1,51 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 70e2ff22bdd236b076592acff41605fc55f2492db26118a771414893f63ac069
+
+name:           braille-conway
+version:        0.1.0.0
+synopsis:       Conway's Game of Braille
+description:    Conway's Game of Life for Uncidoe Braille characters
+homepage:       https://github.com/mlang/braille-conway#readme
+bug-reports:    https://github.com/mlang/braille-conway/issues
+author:         Mario Lang
+maintainer:     mlang@blind.guru
+copyright:      2020 Mario Lang
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/mlang/braille-conway
+
+library
+  exposed-modules:
+      Braille.Conway
+  other-modules:
+      Paths_braille_conway
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , vector
+  default-language: Haskell2010
+
+executable braille-conway
+  main-is: Main.hs
+  other-modules:
+      Paths_braille_conway
+  hs-source-dirs:
+      app
+  build-depends:
+      ansi-terminal
+    , base >=4.7 && <5
+    , braille-conway
+    , vector
+  default-language: Haskell2010

@@ -15,7 +15,7 @@ can of course also be used by sighted users.
 
 ## Usage
 
-With `brltty-trtxt` from the `brltty` package, you can translate any
+With `brltty-trtxt` from [BRLTTY](https://brltty.app/)`brltty`, you can translate any
 arbitrary text to Braille.  `braille-conway` will read from `STDIN` and
 print successive generations as an animation to `STDOUT`.
 Note that the coordinate system wraps around.
@@ -60,9 +60,11 @@ And here are the first five generations from the input above.
 What Conway calls the R-pentomino (also called F-pentomino for its resemblance
 of the letter `F`) is for Braille users the (capital) letter `P` or the
 two letter combination `cd`.
+
 ```console
 $ printf "\n\n    P    \n\n" | brltty-trtxt | braille-conway
 ```
+
 ### Evolution of random text
 
 Another rather silly example would be the evolution of the source code of this program.
